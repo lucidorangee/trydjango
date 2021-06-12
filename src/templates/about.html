@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>About</h1>
+
+<h3>{{ title|capfirst|title }}</h3>
+<p>This is an about page</p>
+
+{{ my_html|safe }}
+
+<p>
+    {{ my_text }}, {{ my_number }}
+</p>
+
+
+<ul>
+    {% for item in my_list %}
+        <li>
+            {{ item }}
+        </li>
+
+    {% endfor %}
+</ul>
+{% endblock %}
